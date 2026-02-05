@@ -203,3 +203,47 @@
     
 //     name.value=""
 // })
+
+
+
+// const p=new Promise((res,rej)=>{
+//     let done=true;
+//     setTimeout(()=>{
+//         if (done){
+//             res({name:"Anand",age:23})
+//         } else(
+//             rej ("word has not been completed")
+//         )
+//         //reject()
+//         },5000)
+//     })
+
+// p.then((data)=>{
+//     console.log(data.name)
+// }).catch ((err)=>{
+//     console.log(err)
+// }).finally(()=>{
+//     console.log("finally block")
+// })
+
+// function doHomework(){
+//     const p=new Promise((res,re)=>{
+//         let done=true;
+//         setTimeout(()=>{
+//             if(done){
+//                 console.log("Homework completed")
+//                 res("Homework is Done")       
+//             }else{
+//                 rej("Homework not completed")
+//             }
+//         })
+//     })
+// }
+
+
+function goToPlayground(){
+    const p=new Promise((res,rej)=>{
+        let done=true;
+        setTimeout()
+    })
+}
