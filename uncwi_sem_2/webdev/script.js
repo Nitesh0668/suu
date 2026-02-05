@@ -259,7 +259,7 @@
     function eatDinner() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-        let dinnerEaten = false;
+        let dinnerEaten =true;
         if (dinnerEaten) {
             console.log("Dinner is eaten");
             resolve("Dinner complete");
@@ -282,7 +282,6 @@
         }, 3000);
     });
     }
-    //chaining
 
     // Promise Chaining Starts
     doHomework()
@@ -294,8 +293,8 @@
     console.log(data);
     return goToPlayground();
     })
-    .catch((error) => {
-    console.log("Something went wrong:", error);
+    .catch((err) => {
+    console.log(err);
     })
     .finally(() => {
     console.log("Day ended — Go to sleep");
