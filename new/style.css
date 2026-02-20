@@ -1,0 +1,18 @@
+.btn{
+    background-color: crimson;
+    color: white;
+    width: 100px;
+    height: 40px;
+    
+}
+
+li{
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list{
+    width: 300px;
+
+}
