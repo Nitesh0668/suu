@@ -379,32 +379,115 @@
 //     console.log(err)
 // })
 
-const form=document.querySelector('#form')
-const eventCards=document.querySelector('.cards')
-form.addEventListener('submit',function(event){
-    event.preventDefault()
-    const title=eventTitle.value
-    const date=eventDate.value
-    const cat=category.value
-    const desc=description.value
+// const form=document.querySelector('#form')
+// const eventCards=document.querySelector('.cards')
+// form.addEventListener('submit',function(event){
+//     event.preventDefault()
+//     const title=eventTitle.value
+//     const date=eventDate.value
+//     const cat=category.value
+//     const desc=description.value
 
-    const card=document.createElement('div')
-    card.classList.add('card')
-    card.innerHTML=`
-        <h2>${title}</h2>
-        <p>📅${date}</p>
-        <button>${cat}</button>
-        <p>${desc}</p>
-        <div class="deleteCard">x</div>
-    `
+//     const card=document.createElement('div')
+//     card.classList.add('card')
+//     card.innerHTML=`
+//         <h2>${title}</h2>
+//         <p>📅${date}</p>
+//         <button>${cat}</button>
+//         <p>${desc}</p>
+//         <div class="deleteCard">x</div>
+//     `
 
-    card.querySelector('.deleteCard').addEventListener('click',function(){
-        card.remove()
-    })
+//     card.querySelector('.deleteCard').addEventListener('click',function(){
+//         card.remove()
+//     })
 
-    eventCards.appendChild(card)
-})
+//     eventCards.appendChild(card)
+// })
 
-document.addEventListener('keydown',(event)=>{
-    document.querySelector('.key').innerText=event.key
-})
+// document.addEventListener('keydown',(event)=>{
+//     document.querySelector('.key').innerText=event.key
+// })
+
+// console.log("first Line")
+// try{
+//     // let sample=345
+//     // console.log(sample)
+//     // console.log("Line after sample")
+//     let age=16
+//     if(age<18){
+//         // console.log("You are minor")
+//         throw new Error("You are minor")
+//     }
+//     //
+
+// }catch(e){
+//     console.error(e)
+//     console.log("Hello we got an error")
+// }
+// console.log("last Line")
+
+
+// async function getData(){
+//     try{
+//         // const response=await  fetch("https://dummyjson.com/products") //GET request
+//         const response=await  fetch('https://dummyjson.com/products/add', {
+//             method: 'POST',
+//             headers: { 'Content-Type': 'application/json' },
+//             body: JSON.stringify({
+//                 title: "Macbook m4",
+//                 description: "Lorem ipsum dolor sit amet.",
+//                 category: "electronics",
+//                 price: 999.8,
+//                 discountPercentage: 10.48,
+//                 rating: 4.56,
+//                 stock: 99,
+//             })
+//         })
+//         if(response.ok===false){
+//             throw new Error("Something went wrong");
+            
+//         }
+//         console.log(response)
+//         const data=await response.json()
+//         console.log(data)
+//         // data.products.forEach((product)=>{
+//         //     console.log(product.title)
+//         // })
+//     }catch(e){
+//         console.log(e)
+//     }
+// }
+
+// getData()
+
+
+// localStorage.setItem("name","Devendra")
+// localStorage.setItem("age",23)
+
+// const uname=localStorage.getItem("name")
+// console.log(uname)
+// console.log(localStorage.getItem("age"))
+
+// localStorage.removeItem("name")
+// localStorage.clear()
+
+
+// sessionStorage.setItem("name","Devendra")
+// sessionStorage.setItem("age",23)
+
+// const uname=sessionStorage.getItem("name")
+// console.log(uname)
+// console.log(sessionStorage.getItem("age"))
+
+// sessionStorage.removeItem("name")
+
+
+// document.cookie="name=Devendra; expires=Thu, 20 Feb 2026 12:00:00 UTC;"
+// document.cookie="age=25; expires=Thu, 20 Feb 2026 12:00:00 UTC;"
+// console.log(document.cookie)
+
+// async function fetchData(){
+//     await fetch("http://127.0.0.1:5502/javascript/index.html")
+// }
+// fetchData()
