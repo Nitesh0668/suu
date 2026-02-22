@@ -205,106 +205,289 @@
 // })
 
 
+// console.log("First Line")
+// setTimeout(()=>{
+//     console.log("after 2 sec")
+//     console.log("Second Line")
+// },2000)
 
-// const p=new Promise((res,rej)=>{
+
+// function print(num){ //higher order fn
+//     setTimeout(()=>{
+//         console.log("Inside print")
+//          num()
+//     },2000)
+   
+// }
+
+// function sample(){  //callback fn
+//     console.log("Inside callback")
+    
+// }
+
+// print(sample)
+
+// console.log("Before Promise")
+// const p=new Promise(function(res,rej){
+
 //     let done=true;
 //     setTimeout(()=>{
-//         if (done){
+//         if(done){
 //             res({name:"Anand",age:23})
-//         } else(
-//             rej ("word has not been completed")
-//         )
-//         //reject()
-//         },5000)
-//     })
-
+//         }else{
+//             rej("Word has not been completed")
+//         }
+//     },5000)
+// })
+// // // console.log(p)
 // p.then((data)=>{
-//     console.log(data.name)
-// }).catch ((err)=>{
+//     console.log("promise resolved")
+// }).catch((err)=>{
 //     console.log(err)
 // }).finally(()=>{
-//     console.log("finally block")
+//     console.log("Finally block")
 // })
+// //  console.log("After Promise")
 
-// function doHomework(){
-//     const p=new Promise((res,re)=>{
+
+// function doHomeWork(){
+//     const p=new Promise((res,rej)=>{
 //         let done=true;
 //         setTimeout(()=>{
 //             if(done){
 //                 console.log("Homework completed")
-//                 res("Homework is Done")       
+//                 res("Homework is Done")
 //             }else{
 //                 rej("Homework not completed")
 //             }
-//         })
+//         },2000)
+//     })
+//     return p
+// }
+
+// function eatDinner(){
+//     const p=new Promise((res,rej)=>{
+//         let done=false;
+//         setTimeout(()=>{
+//             if(done){
+//                 console.log("Dinner completed")
+//                 res("Dinner is Done")
+//             }else{
+//                 rej("Dinner not completed")
+//             }
+//         },2000)
+//     })
+//     return p
+// }
+
+// function goToPlayground(){
+//     const p=new Promise((res,rej)=>{
+//         let done=true;
+//         setTimeout(()=>{
+//             if(done){
+//                 console.log("Went to the playground")
+//                 res("Playground Time")
+//             }else{
+//                 rej("Not Allowed to go!")
+//             }
+//         },2000)
+//     })
+//     return p
+// }
+
+// doHomeWork().then((data)=>{
+//     console.log(data)
+//     return eatDinner()
+// }).then((data)=>{
+//     console.log(data)
+//     return goToPlayground()
+// }).then((data)=>{
+//     console.log(data)
+// }).catch((err)=>{
+//     console.log(err)
+// }).finally(()=>{
+//     console.log("Go To Sleep")
+// })                          
+
+// console.log("first line")
+// setTimeout(()=>{
+//    console.log("Inside Timeout") 
+// },0)
+// const p=new Promise((res,rej)=>{
+//     res("Inside Promise")
+// })
+// p.then((data)=>{
+//     console.log(data)
+// })
+// const p2=new Promise((res,rej)=>{
+//     res("Inside Promise")
+// })
+// p2.then((data)=>{
+//     console.log(data)
+// })
+// const p3=new Promise((res,rej)=>{
+//     res("Inside Promise")
+// })
+// p3.then((data)=>{
+//     console.log(data)
+// })
+// console.log("last line")
+
+// function orderFood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             console.log("Food Ordered!!!")
+//             res("Food Ordered")
+//         },2000)
+//     })
+// }
+// function prepareFood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             console.log("Food Prepared")
+//             res()
+//         },2000)
+//     })
+// }
+// function deliverFood(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             console.log("Food Deliverd")
+//             res()
+//         },2000)
 //     })
 // }
 
+// async function foodOrder(){
+//     const data=await orderFood()
+//     console.log(data)
+//     await prepareFood()
+//     await deliverFood()   
+// }
+
+// foodOrder()
+
+// orderFood().then((data)=>{
+//     console.log(data)
+//     return prepareFood()
+// }).then((data)=>{
+//     console.log(data)
+//     return deliverFood()
+// }).then((data)=>{
+//     console.log(data)
+// }).catch((err)=>{
+//     console.log(err)
+// })
+
+// const form=document.querySelector('#form')
+// const eventCards=document.querySelector('.cards')
+// form.addEventListener('submit',function(event){
+//     event.preventDefault()
+//     const title=eventTitle.value
+//     const date=eventDate.value
+//     const cat=category.value
+//     const desc=description.value
+
+//     const card=document.createElement('div')
+//     card.classList.add('card')
+//     card.innerHTML=`
+//         <h2>${title}</h2>
+//         <p>📅${date}</p>
+//         <button>${cat}</button>
+//         <p>${desc}</p>
+//         <div class="deleteCard">x</div>
+//     `
+
+//     card.querySelector('.deleteCard').addEventListener('click',function(){
+//         card.remove()
+//     })
+
+//     eventCards.appendChild(card)
+// })
+
+// document.addEventListener('keydown',(event)=>{
+//     document.querySelector('.key').innerText=event.key
+// })
+
+// console.log("first Line")
+// try{
+//     // let sample=345
+//     // console.log(sample)
+//     // console.log("Line after sample")
+//     let age=16
+//     if(age<18){
+//         // console.log("You are minor")
+//         throw new Error("You are minor")
+//     }
+//     //
+
+// }catch(e){
+//     console.error(e)
+//     console.log("Hello we got an error")
+// }
+// console.log("last Line")
 
 
-//--------Multiple promise or chaining promise --------
-    // function doHomework() {
-    // return new Promise((resolve, reject) => {
-    //     setTimeout(() => {
-    //     let homeworkDone = true;
-    //     if (homeworkDone) {
-    //         console.log("Homework is done");
-    //         resolve("Homework complete");
-    //     } else {
-    //         reject("Homework not done");
-    //     }
-    //     }, 3000);
-    // });
-    // }
-    // function eatDinner() {
-    // return new Promise((resolve, reject) => {
-    //     setTimeout(() => {
-    //     let dinnerEaten =true;
-    //     if (dinnerEaten) {
-    //         console.log("Dinner is eaten");
-    //         resolve("Dinner complete");
-    //     } else {
-    //         reject(" Didn't eat dinner");
-    //     }
-    //     }, 2000);
-    // });
-    // }
-    // function goToPlayground() {
-    // return new Promise((resolve, reject) => {
-    //     setTimeout(() => {
-    //     let permission = true;
-    //     if (permission) {
-    //         console.log(" Went to the playground");
-    //         resolve("Playground time!");
-    //     } else {
-    //         reject(" Not allowed to go out");
-    //     }
-    //     }, 3000);
-    // });
-    // }
+// async function getData(){
+//     try{
+//         // const response=await  fetch("https://dummyjson.com/products") //GET request
+//         const response=await  fetch('https://dummyjson.com/products/add', {
+//             method: 'POST',
+//             headers: { 'Content-Type': 'application/json' },
+//             body: JSON.stringify({
+//                 title: "Macbook m4",
+//                 description: "Lorem ipsum dolor sit amet.",
+//                 category: "electronics",
+//                 price: 999.8,
+//                 discountPercentage: 10.48,
+//                 rating: 4.56,
+//                 stock: 99,
+//             })
+//         })
+//         if(response.ok===false){
+//             throw new Error("Something went wrong");
+            
+//         }
+//         console.log(response)
+//         const data=await response.json()
+//         console.log(data)
+//         // data.products.forEach((product)=>{
+//         //     console.log(product.title)
+//         // })
+//     }catch(e){
+//         console.log(e)
+//     }
+// }
 
-    // // Promise Chaining Starts
-    // doHomework()
-    // .then((data) => {
-    // console.log(data);
-    // return eatDinner();
-    // })
-    // .then((data) => {
-    // console.log(data);
-    // return goToPlayground();
-    // })
-    // .catch((err) => {
-    // console.log(err);
-    // })
-    // .finally(() => {
-    // console.log("Day ended — Go to sleep");
-    // });
+// getData()
 
-    console.log("first line")
-    setTimeout(() => {
-        console.log("inside timeout")
-    }, 0);
-    const p=new Promise((resolve, reject) => {
-        resolve("inside promise")
-    })
-    console.log("last line")
+
+// localStorage.setItem("name","Devendra")
+// localStorage.setItem("age",23)
+
+// const uname=localStorage.getItem("name")
+// console.log(uname)
+// console.log(localStorage.getItem("age"))
+
+// localStorage.removeItem("name")
+// localStorage.clear()
+
+
+// sessionStorage.setItem("name","Devendra")
+// sessionStorage.setItem("age",23)
+
+// const uname=sessionStorage.getItem("name")
+// console.log(uname)
+// console.log(sessionStorage.getItem("age"))
+
+// sessionStorage.removeItem("name")
+
+
+// document.cookie="name=Devendra; expires=Thu, 20 Feb 2026 12:00:00 UTC;"
+// document.cookie="age=25; expires=Thu, 20 Feb 2026 12:00:00 UTC;"
+// console.log(document.cookie)
+
+// async function fetchData(){
+//     await fetch("http://127.0.0.1:5502/javascript/index.html")
+// }
+// fetchData()
